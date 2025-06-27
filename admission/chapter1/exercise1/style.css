@@ -1,0 +1,21 @@
+#login-banner {
+    color: white;
+    width: 300px;
+    height: 200px;
+    background-image: url('https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg');
+    background-position: center;
+    background-size: cover;
+    
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+.center-align {
+    width: 300px;
+    margin: 150px auto;
+}
+.libertinus-math-regular {
+    font-family: "Libertinus Math", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}

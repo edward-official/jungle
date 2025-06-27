@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크래프톤 정글 | HTML 기초</title>
+    <style>
+        .wrap {
+            width: 800px;
+            background-color: paleturquoise;
+        }
+        div {color: grey;}
+        .bold > h5 {font-weight: bold;}
+        .italic {font-style: italic;}
+        div > div > div {background-color: palegreen;}
+        .width-50percent {width: 50%;}
+        .ivory {color: ivory;}
+        #myH3 {text-align: right;}
+    </style>
+</head>
+<body>
+    <h1>1번 h1</h1>
+    <div class="wrap"><!-- width: 50% -->
+        <div>
+            <h3>1번 h3</h3>
+            <div class="bold">
+                <h3 id="myH3" class="italic">2번 h3</h3>
+                <h5>1번 h5</h5>
+                <h5 class="italic ivory">2번 h5</h5>
+            </div>
+            <div class="width-50percent">
+                <h3 class="ivory">3번 h3</h3>
+                <h3>4번 h3</h3>
+                <h5>3번 h5</h5>
+            </div>
+            <h5>4번 h5</h5>
+        </div>
+    </div>
+    <h5>5번 h5</h5>
+</body>
+</html>
