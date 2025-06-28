@@ -1,0 +1,31 @@
+.main-container {
+    width: 60%;
+    margin: 10px auto;
+}
+div {
+    padding: 30px;
+    border-radius: 10px;
+}
+.text-bold {
+    font-weight: 200;
+}
+.libertinus-mono-regular {
+    font-family: "Libertinus Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+.text-comment {
+    font-size: small;
+}
+#posting-box {
+    border: 1px dotted black;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
+.form-group, .form-control {
+    padding: 0px;
+}
+#article-url {
+    border: 1px solid #ced4da;
+}
