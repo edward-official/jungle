@@ -1,0 +1,4 @@
+WEB API
+JSON
+GET(Read), POST(Create, Update, Delete): CRUD
+
