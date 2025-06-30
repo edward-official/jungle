@@ -1,5 +1,11 @@
 💻 virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
 deactivate
+
+"package requests"
+
+
 
 💻 package: request, bs4(BeautifulSoup4)
 
