@@ -1,0 +1,32 @@
+.center {
+  text-align: center;
+}
+
+.sorter-box {
+  width: 500px;
+}
+
+.movie-list {
+  width: 500px;
+  margin: 20px auto 0 auto;
+}
+
+.movie-title {
+  display: inline-block;
+}
+
+.movie-title:hover {
+  text-decoration: underline;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.text-centered {
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+#entire-container {
+  margin-top: 25px;
+  /* background-color: tan; */
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#submit-container1 > form {
+  /* background-color: teal; */
+  margin: auto;
+  width: 60%;
+}

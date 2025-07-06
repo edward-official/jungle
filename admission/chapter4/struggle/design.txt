@@ -1,0 +1,11 @@
+1. bootstrap
+2. jquery + ajax
+3. scraping
+4. flask
+5. database
+
+[procedure 1] get user input into a database and visualize it
+[procedure 2] scraping informations into a database and visualize it
+[procedure 3] enable users to update, delete, arrange the elements
+
+onclick calls ajax function to deliever the data to the flask application
