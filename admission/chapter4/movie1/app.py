@@ -69,8 +69,7 @@ def show_trashes():
 @app.route('/api/like', methods=['POST'])
 def like_movie():
   ID = request.form["_id"]
-  print(type(ID)) // str
-  movie = db.movies.find_one({"_id": ID, "trashed": False})
+  movie = db.movies.find_one({"_id": ObjectId(ID), "trashed": False})
   if not movie:
     print("fail case 1")
     return jsonify({'result': 'failure'})
@@ -81,6 +80,13 @@ def like_movie():
   else:
     print("fail case 2")
     return jsonify({'result': 'failure'})
+  
+
+@app.route("/api/discard", methods=["POST"])
+def discard():
+  movieID = request.form["_id"]
+  db.movies.update_one({"_id": ObjectId(movieID)}, {"$set" : {"trashed": True}})
+  return jsonify({"result": "success"})
 
 
 if __name__ == '__main__':

@@ -38,7 +38,7 @@ function showMovie() {
   } else {
     $.ajax({
       type: "GET",
-      url: "/api/trash",
+      url: "/api/trashMode",
       data: { sortMode: sortMode },
       success: function (response) {
         if (response["result"] != "success") {
@@ -78,7 +78,7 @@ function addMovieCards(movies, trashMode) {
     if (trashMode == false) {
       cardFooterHtml = `
         <a href="#" onclick="likeMovie('${id}')">like</a>
-        <a href="#" onclick="trashMovie()">bin</a>
+        <a href="#" onclick="trashMovie('${id}')">bin</a>
       `;
     } else {
       cardFooterHtml = `
@@ -97,7 +97,6 @@ function addMovieCards(movies, trashMode) {
 }
 
 function likeMovie(movieID) {
-  alert(movieID);
   $.ajax({
     type: "POST",
     url: "/api/like",
@@ -113,10 +112,15 @@ function likeMovie(movieID) {
   });
 }
 
-function trashMovie() {
-  alert(
-    "휴지통 보내기 기능을 직접 구현해보세요.\n서버 측에 API 를 추가 후 여기서 그 API 를 호출하면 됩니다."
-  );
+function trashMovie(movieID) {
+  $.ajax({
+    type: "POST",
+    url: "/api/discard",
+    data: { _id: movieID },
+    success: function (response) {
+      showMovie();
+    },
+  });
 }
 
 function restoreMovie() {
