@@ -1,0 +1,16 @@
+#center-container {
+  width: 60%;
+  margin: auto;
+}
+
+#banner {
+  background-color: beige;
+  height: 200px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.title-text {
+  font-size: large;
+  font-weight: bold;
+}
