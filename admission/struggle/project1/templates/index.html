@@ -19,9 +19,13 @@
       <div>click the button of a movie to do the like</div>
     </div>
     <div id="center-container">
-      <button class="center-align" onclick="convertMode()">
-        <small> convert to hidden movies </small>
-      </button>
+      <div class="center-align small-text">
+        <button onclick="flipLikeOrder()">order by likes</button>
+        <button onclick="flipYearOrder()">order by released year</button>
+        <button id="button-mode" onclick="convertMode()">
+          convert to hidden movies
+        </button>
+      </div>
       <div id="movie-container"></div>
     </div>
 

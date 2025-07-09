@@ -34,8 +34,12 @@
   font-size: 20px;
 }
 
-.button-likes, .button-hide {
+.button-1 {
   font-size: small;
   border-radius: 10px;
   background-color: white;
+}
+
+.small-text {
+  font-size: small;
 }
