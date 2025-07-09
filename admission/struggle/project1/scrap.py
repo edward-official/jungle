@@ -22,5 +22,7 @@ for movie in movies:
     "title": title,
     "releasedYear": releasedYear,
     "runningTime": runningTime,
+    "likes": 0,
+    "hidden": False,
   }
   database.movies.insert_one(rowData)

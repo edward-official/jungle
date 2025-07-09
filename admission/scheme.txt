@@ -6,5 +6,5 @@
 
 1. scrap data into database: requests, bs4, pymongo
 2. serve database information to browser: pymongo, flask, bootstrap
-3. user interface and database interaction: ajax, flask, pymongo
+3. user interface and database interaction: ajax, flask, pymongo (like, sort, hide, recover, delete)
 4. service through EC2 server: linux, aws, gabia
