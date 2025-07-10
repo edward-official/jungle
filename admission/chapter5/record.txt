@@ -1,0 +1,7 @@
+1. key pair의 접근 권한을 설정하기: sudo chmod 400 /Users/antinori/Desktop/jungle.pem
+2. SSH를 이용해서 EC2 서버에 접속: ssh -i /Users/antinori/Desktop/jungle.pem ubuntu@13.209.35.88
+3. "python" 명령어의 연결 버전을 python3 버전으로 업데이트: sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+4. 패키지 목록을 업데이트: sudo apt-get update
+5. pip 설치: sudo apt-get install -y python3-pip
+6. 심볼릭 링크 설정: sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+7. 플라스크(예시용) 설치: pip install flask
