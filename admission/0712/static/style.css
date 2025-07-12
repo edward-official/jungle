@@ -1,0 +1,44 @@
+#center-container {
+  width: 60%;
+  margin: auto;
+  padding: 40px;
+  background-color: whitesmoke;
+}
+#center-container h1 {
+  margin-bottom: 20px;
+}
+#memo-version {
+  background-color: gainsboro;
+  padding: 10px;
+}
+#memo-form {
+  margin-bottom: 40px;
+}
+#memo-title, #memo-content, .new-title, .new-text {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#memo-title {
+  height: 30px;
+}
+#memo-content {
+  height: 60px;
+}
+#submitMemo {
+  border: 1px solid black;
+  width: 80px;
+  text-align: center;
+}
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.card .button {
+  width: 10%;
+  text-align: center;
+  border: 1px black solid;
+  margin-right: 10px;
+}
