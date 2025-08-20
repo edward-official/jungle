@@ -1,0 +1,27 @@
+1. key pair의 접근 권한을 설정하기: sudo chmod 400 /Users/antinori/Desktop/jungle.pem
+2. SSH를 이용해서 EC2 서버에 접속: ssh -i /Users/antinori/Desktop/jungle.pem ubuntu@13.209.35.88
+3. "python" 명령어의 연결 버전을 python3 버전으로 업데이트: sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+4. 패키지 목록을 업데이트: sudo apt-get update
+5. pip 설치: sudo apt-get install -y python3-pip
+6. 심볼릭 링크 설정: sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+7. 패키지(예시) 설치: pip install flask requests beautifulsoup4 pymongo
+8. 몽고DB 퍼블릭 키 설치: wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+9. 몽고DB의 저장소 추가: echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+10. 패키지 목록 업데이트: sudo apt-get update
+11. 몽고DB 설치: sudo apt-get install -y mongodb-org
+12. 몽고DB 실행: sudo service mongod start
+13. 몽고DB 쉘에 들어가기: mongosh
+14. 계정 바꾸기: use admin;
+15. 계정 생성하기: db.createUser({user: "edward", pwd: "jungle", roles:["root"]});
+16. 몽고DB 쉘에서 나오기: exit
+17. 몽고DB 재시작: sudo service mongod restart
+18. 몽고DB 외부 연결 허용하기: sudo vi /etc/mongod.conf, 이미지 참고
+19. 몽고DB 재시작: sudo service mongod restart
+20. Studio3T를 통해 EC2 서버의 몽고DB에 원격으로 접속: 이미지 참고
+21. EC2 서버에 프로젝트 업로드: 파일 질라
+22. 포트 포워딩: sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 5000
+23. 원격 접속을 종료하더라도 서버가 계속 돌아가게 하기: nohup python app.py &
+24. 프로세스 번호 확인하기: ps -ef | grep 'app.py'
+25. 서버 종료하기: kill -9 [pid값]
+26. 도메인 등록하기(가비아): 이미지 참고
+

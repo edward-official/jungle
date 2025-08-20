@@ -1,0 +1,10 @@
+💻 chapter 1 (html, css)
+💻 chapter 2 (js, jquery, ajax)
+💻 chapter 3 (python, database)
+💻 chapter 4 (flask)
+💻 chapter 5 (aws)
+
+1. scrap data into database: requests, bs4, pymongo
+2. serve database information to browser: pymongo, flask, bootstrap
+3. user interface and database interaction: ajax, flask, pymongo (like, sort, hide, recover, delete)
+4. service through EC2 server: linux, aws, gabia
