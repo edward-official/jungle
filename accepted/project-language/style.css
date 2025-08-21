@@ -1,0 +1,13 @@
+#center-container {
+  width: 80%;
+  margin: auto;
+}
+
+.display-block {
+  margin: 10px 0px;
+  display: block;
+}
+
+div.display-block input {
+  width: 40%;
+}
