@@ -1,20 +1,24 @@
-$(document).ready(opening());
 function opening() {
   console.log("page loaded");
 }
+$(document).ready(opening());
 
 function logIn() {
   let logIn = $("#log-in");
+  let idEmail = logIn.find("#id-email").val();
 
-  let tagIdEmail = logIn.find("#id-email");
-  let tagPw = logIn.find("#pw");
-
-  let idEmail = tagIdEmail.val();
-  let pw = tagPw.val();
-
-  console.log(idEmail);
-  console.log(pw);
+  alert("log in: " + idEmail);
 
   tagIdEmail.val("");
   tagPw.val("");
 }
+
+$.ajax({
+  type: "GET", // GET 방식으로 요청한다.
+  url: "http://openapi.seoul.go.kr:8088/6d4d776b466c656533356a4b4b5872/json/RealtimeCityAir/1/99",
+  data: {}, // 요청하면서 함께 줄 데이터 (GET 요청시엔 비워두세요)
+  success: function (response) {
+    // 서버에서 준 결과를 response라는 변수에 담음
+    console.log(response); // 서버에서 준 결과를 이용해서 나머지 코드를 작성
+  },
+});
