@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="center-container">
+      <div id="log-in">
+        <fieldset>
+          <div>
+            <div class="display-block">
+              <label for="id-email">ID: </label>
+              <input id="id-email" type="email" placeholder="email" />
+            </div>
+
+            <div class="display-block">
+              <label for="pw">PW: </label>
+              <input id="pw" type="password" placeholder="password" />
+            </div>
+          </div>
+
+          <button onclick="logIn()">log in</button>
+        </fieldset>
+      </div>
+
+      <div id="sign-up">
+        <fieldset>
+          <div class="display-block">
+            <label for="id-email-sign-up">ID: </label>
+            <input
+              id="id-email-sign-up"
+              type="email"
+              placeholder="enter your email address"
+            />
+          </div>
+
+          <div class="display-block">
+            <label for="pw-sign-up">PW: </label>
+            <input
+              id="pw-sign-up"
+              type="password"
+              placeholder="enter password"
+            />
+          </div>
+
+          <div class="display-block">
+            <label for="pw-check-sign-up">PW: </label>
+            <input
+              id="pw-check-sign-up"
+              type="password"
+              placeholder="enter password again"
+            />
+          </div>
+
+          <button class="display-block">sign up</button>
+        </fieldset>
+      </div>
+
+      <div id="questions">
+        <fieldset>
+          <legend>What does "dzien dobry" mean?</legend>
+
+          <label class="display-block">
+            <input
+              type="radio"
+              name="question1"
+              value="Good morning!"
+              required
+            />
+            Good morning!
+          </label>
+
+          <label class="display-block">
+            <input type="radio" name="question1" value="How was your sleep?" />
+            How was your sleep?
+          </label>
+
+          <label class="display-block">
+            <input type="radio" name="question1" value="Nice to meet you!" />
+            Nice to meet you!
+          </label>
+
+          <label class="display-block">
+            <input type="radio" name="question1" value="Can I help you?" />
+            Can I help you?
+          </label>
+
+          <textarea
+            class="display-block"
+            placeholder="take a note here"
+          ></textarea>
+
+          <button class="display-block">submit</button>
+        </fieldset>
+      </div>
+    </div>
+
+    <script src="../static/script.js"></script>
+  </body>
+</html>
