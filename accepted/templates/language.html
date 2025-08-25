@@ -13,8 +13,8 @@
         <fieldset>
           <div>
             <div class="display-block">
-              <label for="id-email">ID: </label>
-              <input id="id-email" type="email" placeholder="email" />
+              <label for="id">ID: </label>
+              <input id="id" type="email" placeholder="email" />
             </div>
 
             <div class="display-block">
@@ -23,16 +23,17 @@
             </div>
           </div>
 
-          <button onclick="logIn()">log in</button>
+          <button onclick="login()">log in</button>
+          <button onclick="unveilSignup()">sign up</button>
         </fieldset>
       </div>
 
-      <div id="sign-up">
+      <div id="sign-up" class="hidden">
         <fieldset>
           <div class="display-block">
-            <label for="id-email-sign-up">ID: </label>
+            <label for="id-sign-up">ID: </label>
             <input
-              id="id-email-sign-up"
+              id="id-sign-up"
               type="email"
               placeholder="enter your email address"
             />
@@ -56,11 +57,12 @@
             />
           </div>
 
-          <button class="display-block">sign up</button>
+          <button>submit</button>
+          <button onclick="cancelSignup()">cancel</button>
         </fieldset>
       </div>
 
-      <div id="questions">
+      <div id="questions" class="hidden">
         <fieldset>
           <legend>What does "dzien dobry" mean?</legend>
 

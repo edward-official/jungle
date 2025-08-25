@@ -11,3 +11,7 @@
 div.display-block input {
   width: 40%;
 }
+
+.hidden {
+  display: none;
+}
