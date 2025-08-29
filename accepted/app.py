@@ -11,11 +11,21 @@ database = mongoDB.openPL
 def home():
   return render_template('language.html')
 
-@app.route("/login", methods=["GET"])
+@app.route("/login", methods=["POST"])
 def login():
-  id = request.args.get("id")
-  print(id)
-  return jsonify({"result": "success"})
+  id = request.form["id"]
+  pw = request.form["pw"]
+
+  drawnTuple = database.users.find_one({"id": id})
+  isAuthenticated = True
+  if drawnTuple==None:
+    isAuthenticated = False
+    print("no tuple found")
+  elif drawnTuple["pw"]!=pw:
+    isAuthenticated = False
+    print("password incorrect")
+
+  return jsonify({"result": "success", "isAuthenticated": isAuthenticated})
 
 @app.route("/singup", methods=["POST"])
 def signup():

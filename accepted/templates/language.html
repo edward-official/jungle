@@ -11,27 +11,20 @@
     <div id="center-container">
       <div id="log-in">
         <fieldset>
-          <form>
-            <div>
-              <div class="display-block">
-                <label for="id">ID: </label>
-                <input id="id" type="email" placeholder="email" required />
-              </div>
-
-              <div class="display-block">
-                <label for="pw">PW: </label>
-                <input
-                  id="pw"
-                  type="password"
-                  placeholder="password"
-                  required
-                />
-              </div>
+          <div>
+            <div class="display-block">
+              <label for="id">ID: </label>
+              <input id="id" type="email" placeholder="email" required />
             </div>
 
-            <button type="submit" onclick="login()">log in</button>
-            <button onclick="unveilSignup()">sign up</button>
-          </form>
+            <div class="display-block">
+              <label for="pw">PW: </label>
+              <input id="pw" type="password" placeholder="password" required />
+            </div>
+          </div>
+
+          <button type="submit" onclick="login()">log in</button>
+          <button onclick="moveToSignup()">sign up</button>
         </fieldset>
       </div>
 
@@ -65,7 +58,7 @@
           </div>
 
           <button onclick="signup()">submit</button>
-          <button onclick="cancelSignup()">cancel</button>
+          <button onclick="backToLogin()">cancel</button>
         </fieldset>
       </div>
 
