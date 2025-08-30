@@ -1,5 +1,0 @@
-sign up
-log in
-level test
-study
-review

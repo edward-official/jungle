@@ -1,7 +1,5 @@
 from flask import Flask, render_template, jsonify, request
 from pymongo import MongoClient
-
-
 app = Flask(__name__)
 mongoDB = MongoClient('localhost', 27017)
 database = mongoDB.openPL
@@ -9,20 +7,20 @@ database = mongoDB.openPL
 
 @app.route('/')
 def home():
-  return render_template('language.html')
+  return render_template('login.html')
 
 
 @app.route("/login", methods=["POST"])
 def login():
-  id = request.form["id"]
-  pw = request.form["pw"]
+  userId = request.form["userId"]
+  password = request.form["password"]
 
-  drawnTuple = database.users.find_one({"id": id})
+  drawnTuple = database.users.find_one({"userId": userId})
   isRequestAccepted = True
   if drawnTuple==None:
     isRequestAccepted = False
     print("no tuple found")
-  elif drawnTuple["pw"]!=pw:
+  elif drawnTuple["password"]!=password:
     isRequestAccepted = False
     print("password incorrect")
 
@@ -31,22 +29,30 @@ def login():
 
 @app.route("/signup", methods=["POST"])
 def signup():
-  id = request.form["id"]
-  drawnTuple = database.users.find_one({"id": id})
+  print("🚨 check point 1")
+  userId = request.form["userId"]
+  print("🚨 check point 2")
+  drawnTuple = database.users.find_one({"userId": userId})
   if drawnTuple!=None:
-    # print("case 1")
+    print("🚨 case 1")
     return jsonify({"isRequestAccepted": False, "reason": "redundancy"})
 
-  pw1 = request.form["pw1"]
-  pw2 = request.form["pw2"]
-  if pw1!=pw2:
-    # print("case 2")
-    return jsonify({"isRequestAccepted": False, "reason": "password"})
+  password1 = request.form["password1"]
+  password2 = request.form["password2"]
+  if password1!=password2:
+    print("🚨 case 2")
+    return jsonify({"isRequestAccepted": False, "reason": "passwords do not match"})
   
-  user = {"id": id, "pw": pw1}
+  user = {"userId": userId, "password": password1}
   database.users.insert_one(user)
-  # print("case 3")
+  print("🚨 case 3")
   return jsonify({"isRequestAccepted": True})
+
+
+@app.route("/questions", methods=["GET"])
+def questions():
+  print("🚨 rendering questions.html")
+  return render_template("questions.html")
 
 
 if __name__ == '__main__':

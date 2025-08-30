@@ -1,0 +1,19 @@
+COLLECTION users
+{
+  id: email
+  pw: password
+}
+
+COLLECTION questions
+{
+  stem: "okno"
+  choices: ["window", "cat", "food", "mountain"]
+  indexOfAnswer: 0
+}
+
+COLLECTION attempts
+{
+  userId: ObjectId
+  questionsId: ObjectId
+  result: Boolean
+}
